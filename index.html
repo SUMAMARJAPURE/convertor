@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOLLAR TO RUPEES</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2nVeWFP1T4YJUtOnAP1qQm_BEJUj3TYuAFU-GK5OICNn8QwaEY9BVrakloFejF7UrhaE&usqp=CAU);
+            background-size: cover;
+            text-align: center;
+        }
+        label{
+            width: 200px;
+            color: rgb(193, 226, 235);
+            font-size:150px;
+        }
+        button {
+            align-items: center;
+            width: 200px;
+            height: 30px;
+        </style>
+            <body>
+                <img src="C:\Users\sumag\OneDrive\Desktop\sumii.html\asdf.jpg">
+            <h1>DOLLAR TO RUPEES</h1>
+            <input type="number" id="amount" placeholder="Enter Amount in dollars">
+         <button id="convert-btn">Convert</button>
+            <p id="result"></p>
+        </div>
+        <h1>RUPEES TO DOLLAR</h1>
+        <input type="number" id="amount" placeholder="Enter Amount in rupees">
+            <button id="convert-rtd">Convert</button>
+            <p id="result"></p>
+            <script>
+            const convertButton = document.getElementById('convert-btn');
+            const amountInput = document.getElementById('amount');
+            const resultElement = document.getElementById('result');
+            convertButton.addEventListener('click', () => {
+                const usdAmount = parseFloat(amountInput.value);
+                if (!isNaN(usdAmount)) {
+    
+                    const conversionRate = 74.50; 
+                    const inrAmount = (usdAmount * conversionRate).toFixed(2);
+                    resultElement.textContent = `${usdAmount} USD is approximately ${inrAmount} INR`;
+                } else {
+                    resultElement.textContent = 'Please enter a valid amount'
+                }
+            });
+        </script>
+    </body>
+    </html>
+
+</body>
+</html>
